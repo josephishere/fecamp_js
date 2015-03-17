@@ -18,8 +18,8 @@
 	// 사용 예1: var num = 세제곱(3); // num의 값은 27
 	// 사용 예2: var num = 세제곱(5); // num의 값은 125
     var num = 세제곱(3);
-    function 세제곱 (number) {
-        return number * number * number;
+    function 세제곱 (n) {
+        return Math.pow(n, 3);
     };
     console.log(num); // num의 값은 27
 
@@ -29,11 +29,11 @@
 	// 답2(arr);
 	// console.log(arr); // arr의 값은 ['하나', '둘', '셋', '번호 끝'];
     var arr = ['하나', '둘', '셋'];
-    function 답2(배열) {
-        return 배열[배열.length] = '번호 끝';
+    function 답2(a) {
+        return a[a.length] = '번호 끝';
     };
     답2(arr);
-    console.log(arr); // ['하나', '둘', '셋', '번호 끝'];
+    console.log(arr.pop());
     
 
 	// 문제3: 다음과 같이 나열된 숫자에서 첫 번째와 두 번째 값을 인수로 전달하면
@@ -49,8 +49,8 @@
 	// 5, 4, 1
 	// 100, 3, 1
 	// 100, 25, 0
-    function 답3(num1, num2) {
-        return num1 % num2;
+    function 답3(i, j) {
+        return i % j;
     };
     console.log(답3(3,2)); // 값은 1
 
@@ -59,8 +59,8 @@
 	// 사용 예1: var 타입 = 답4('문자열'); // 타입 변수의 값은 "string"
 	// 사용 예2: var 타입 = 답4(3.5); // 타입 변수의 값은 "number"
     var 타입 = 답4(true);
-    function 답4(값) {
-        return typeof 값;
+    function 답4(v) {
+        return typeof v;
     };
     console.log(타입); // 타입 변수의 값은 'boolean'
 
@@ -70,10 +70,8 @@
 	// 하나
 	// 둘
 	// 셋
-    function 답5(배열) {
-        console.log(배열[0]);
-        console.log(배열[1]);
-        console.log(배열[2]);
+    function 답5(a) {
+        console.log(a.join('\n'));
     };
     답5(['하나','둘','셋']);
 	</script>
